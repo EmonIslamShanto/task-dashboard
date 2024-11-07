@@ -21,7 +21,7 @@ const Column = ({ title, color }) => {
 };
 Column.propTypes = {
   title: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
+  color: PropTypes.string,
 };
 
 export default Column;

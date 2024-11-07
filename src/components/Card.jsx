@@ -1,7 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { fetchFileCount } from '../api/fileService';
 import Modal from "./Modal"; 
 const Card = () => {
   const [showModal, setShowModal] = useState(false);  
+  const [fileCount, setFileCount] = useState(0);
+
+  useEffect(() => {
+    const countFiles = async () => {
+      try {
+        const count = await fetchFileCount();
+        setFileCount(count);
+      } catch (error) {
+        console.error('Error loading file data:', error);
+      }
+    };
+
+    countFiles();
+  }, []);
 
   return (
     <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 shadow-sm">
@@ -29,7 +44,7 @@ const Card = () => {
           <button
             onClick={() => setShowModal(true)} 
           >
-            <i className="fa-solid fa-paperclip"></i> 25
+            <i className="fa-solid fa-paperclip"></i> {fileCount}
           </button>
         </div>
         <span><i className="fa-regular fa-calendar-days"></i>  30-12-2022</span>
