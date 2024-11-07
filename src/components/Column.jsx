@@ -11,8 +11,8 @@ const Column = ({ title, color }) => {
         </div>
         <span className="font-bold bg-gray-300 px-3 py-1 rounded-md">0</span>
       </div>
-      <div className="flex flex-col gap-4 overflow-y-auto max-h-[90vh] mt-4">
-        {[...Array(10)].map((_, index) => (
+      <div className="flex flex-col gap-4 overflow-y-auto max-h-[95vh] mt-4">
+        {[...Array(8)].map((_, index) => (
           <Card key={index} />
         ))}
       </div>

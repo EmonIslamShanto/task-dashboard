@@ -5,17 +5,19 @@
 
 
 @layer utilities {
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
+  /* Custom Scrollbar for WebKit Browsers (Chrome, Safari) */
+  ::-webkit-scrollbar {
       width: 8px;
-      margin: 2px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background-color: rgb(0, 112, 189); /* Change the color to blue */
-      border-radius: 10px;
-    }
-    ::-webkit-scrollbar-track {
-      background-color: #f1f1f1; /* Optional: set track color */
-      border-radius: 10px;
-    }
   }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: rgb(0, 112, 189); /* Thumb color */
+      border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background-color: #f1f1f1; /* Track color */
+      border-radius: 10px;
+  }
+
+}

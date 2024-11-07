@@ -10,7 +10,7 @@ const columnsData = [
 
 const Dashboard = () => {
   return (
-    <div className="flex overflow-x-auto p-5 bg-gray-100 min-h-screen">
+    <div className="flex overflow-x-auto p-5 bg-gray-100 max-h-[95vh]">
       {columnsData.map((column, index) => (
         <Column key={index} title={column.title} color={column.color} />
       ))}
